@@ -1,0 +1,17 @@
+// This configuration file exists because VS Code expects a file named exactly
+// `tsconfig.json` in the root of the project to apply configurations, and, if
+// it does not exist, a default configuration is used implicitly. The `main`
+// and `test` scripts each reference their corresponding configuration files
+// directly in the invocation of the `tsc` command
+
+{
+  "extends": ["./tsconfig-base.json"],
+
+  "include": ["./src/**/*.ts"],
+  "exclude": [],
+  "references": [],
+
+  "compilerOptions": {
+    "noEmit": true
+  }
+}

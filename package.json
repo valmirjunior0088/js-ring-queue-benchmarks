@@ -1,0 +1,28 @@
+{
+  "name": "js-ring-queue-benchmarks",
+  "version": "0.0.0",
+  "description": "Performance tests involving different implementations of the ring queue data structure",
+  "author": "Valmir Pretto <valmirjunior0088 at gmail dot com>",
+  "license": "UNLICENSED",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "tsc --build ./tsconfig-main.json && node ./bin/index.js",
+    "test": "tsc --build ./tsconfig-test.json && mocha ./bin/**/*.test.js",
+    "format": "prettier --write .",
+    "format-check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.16",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.12.11",
+    "@typescript-eslint/eslint-plugin": "^7.8.0",
+    "@typescript-eslint/parser": "^7.8.0",
+    "chai": "^5.1.1",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "mocha": "^10.4.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.5"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/strict-type-checked",
+    "plugin:@typescript-eslint/stylistic-type-checked",
+    "prettier"
+  ],
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "module",
+    "project": ["./tsconfig-main.json", "./tsconfig-test.json"],
+    "tsconfigRootDir": "./"
+  },
+  "settings": {},
+  "plugins": [],
+  "rules": {
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": ["function", "variable"],
+        "format": ["camelCase", "PascalCase"]
+      },
+      {
+        "selector": "variable",
+        "modifiers": ["global", "const"],
+        "format": ["UPPER_CASE"]
+      },
+      {
+        "selector": "parameter",
+        "modifiers": ["unused"],
+        "leadingUnderscore": "require",
+        "format": ["camelCase"]
+      },
+      {
+        "selector": "memberLike",
+        "modifiers": ["private"],
+        "leadingUnderscore": "require",
+        "format": ["camelCase"]
+      }
+    ],
+
+    "@typescript-eslint/typedef": [
+      "error",
+      {
+        "propertyDeclaration": true,
+        "memberVariableDeclaration": true
+      }
+    ],
+
+    "@typescript-eslint/no-unnecessary-type-assertion": [
+      "error",
+      {
+        "typesToIgnore": ["never"]
+      }
+    ],
+
+    "@typescript-eslint/consistent-type-exports": "error",
+    "@typescript-eslint/consistent-type-imports": "error",
+    "@typescript-eslint/explicit-function-return-type": "error",
+    "@typescript-eslint/explicit-member-accessibility": "error",
+    "@typescript-eslint/explicit-module-boundary-types": "error",
+    "@typescript-eslint/switch-exhaustiveness-check": "error",
+
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-inferrable-types": "off"
+  }
+}
